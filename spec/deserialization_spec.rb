@@ -4,13 +4,12 @@ describe ActionController::Base, '.deserializable_resource',
          type: :controller do
   let(:payload) do
     {
-      _jsonapi: {
-        'data' => {
-          'type' => 'users',
-          'attributes' => { 'name' => 'Lucas' }
-        }
+      'data' => {
+        'type' => 'users',
+        'attributes' => { 'name' => 'Lucas' }
       }
     }
+
   end
 
   context 'when using default deserializer' do
